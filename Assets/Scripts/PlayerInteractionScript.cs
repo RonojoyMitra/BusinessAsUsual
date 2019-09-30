@@ -5,25 +5,52 @@ using UnityEngine;
 public class PlayerInteractionScript : MonoBehaviour
 {
     public GameObject door;
-    // Start is called before the first frame update
-    void Start()
-    {
-    
-    }
 
+    public bool isCloseToDoor;
+    public bool doorIsOpened;
     // Update is called once per frame
+    public float doorRotation;
     void Update()
     {
-        if (Vector3.Distance(transform.position, door.transform.position) < 10f && Input.GetKey(KeyCode.F))
+        Ray PlayerRay = new Ray(transform.position, transform.forward);
+        float maxRayDistance = 8f;
+        Debug.DrawRay(PlayerRay.origin,PlayerRay.direction,Color.green);
+        RaycastHit PlayerHit = new RaycastHit();
+        doorRotation = door.transform.localEulerAngles.y;
+
+        //if (Vector3.Distance(transform.position, door.transform.position) < 10f)
+        //{
+        //    isCloseToDoor = true;
+        //}
+        if (PlayerHit.transform != null && PlayerHit.transform.tag == "Door")
         {
-            Debug.Log("DoorisOpened");
+            Debug.Log("settingIsCloseToDoor to true");
+            isCloseToDoor = true;
+        }
+        if (PlayerHit.transform == null)
+        {
+            Debug.Log("SettingIsclosetoDoor to false");
+            isCloseToDoor = false;
+        }
+        //if (Vector3.Distance(transform.position, door.transform.position) > 10f)
+        //{
+        //    isCloseToDoor = false;
+        //}
+
+        if (doorRotation <= 118 && doorIsOpened == false && door.GetComponent<DoorOpenScript>().Opened == false && isCloseToDoor && Input.GetKeyDown(KeyCode.F))
+        {
+            doorIsOpened = true;
+            Debug.Log("Opening Door");
             door.SendMessage("DoorOpened");
         }
+        if (doorRotation > 118 && Input.GetKeyDown(KeyCode.F) && isCloseToDoor)
+        {
+            {
+                Debug.Log("DoorisClosed");
+                door.SendMessage("DoorClosed");
+                doorIsOpened = false;
+            }
+        }
 
-        //if (Vector3.Distance(transform.position, door.transform.position) < 10f && Input.GetKey(KeyCode.F) && door.GetComponent<DoorOpenScript>().Opened == true)
-        //{
-        //    Debug.Log("DoorisClosed");
-        //    door.SendMessage("DoorClosed");
-        //}
     }
 }

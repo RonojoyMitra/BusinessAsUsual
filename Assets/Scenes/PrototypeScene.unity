@@ -372,6 +372,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 599926931}
+  isCloseToDoor: 0
+  doorIsOpened: 0
+  doorRotation: 0
 --- !u!1 &369920400
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +568,7 @@ GameObject:
   - component: {fileID: 599926936}
   m_Layer: 0
   m_Name: door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -708,6 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisRigidbody: {fileID: 599926937}
   startingTorque: {x: 0, y: 50, z: 0}
+  Opened: 0
 --- !u!1 &694044345
 GameObject:
   m_ObjectHideFlags: 0

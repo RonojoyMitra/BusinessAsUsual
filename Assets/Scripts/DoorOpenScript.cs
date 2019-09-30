@@ -22,13 +22,13 @@ public class DoorOpenScript : MonoBehaviour
 
     void DoorOpened()
     {
-        thisRigidbody.AddTorque(startingTorque);
         Opened = true;
+        thisRigidbody.AddTorque(startingTorque);
     }
 
     void DoorClosed()
     {
-        thisRigidbody.AddTorque(-startingTorque);
         Opened = false;
+        thisRigidbody.AddTorque(-startingTorque);
     }
 }
