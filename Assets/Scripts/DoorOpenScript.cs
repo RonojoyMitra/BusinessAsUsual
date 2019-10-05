@@ -6,7 +6,8 @@ public class DoorOpenScript : MonoBehaviour
 {
     public Rigidbody thisRigidbody;
     public Vector3 startingTorque;
-    public bool Opened = false;
+    public bool doorOpened = false;
+    public float doorRotation; 
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +23,13 @@ public class DoorOpenScript : MonoBehaviour
 
     void DoorOpened()
     {
-        Opened = true;
+        doorOpened = true;
         thisRigidbody.AddTorque(startingTorque);
     }
 
     void DoorClosed()
     {
-        Opened = false;
+        doorOpened = false;
         thisRigidbody.AddTorque(-startingTorque);
     }
 }

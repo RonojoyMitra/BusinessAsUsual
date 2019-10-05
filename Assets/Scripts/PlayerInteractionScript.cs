@@ -42,7 +42,7 @@ public class PlayerInteractionScript : MonoBehaviour
         //    isCloseToDoor = false;
         //}
 
-        if (doorRotation <= 118 && doorIsOpened == false && door.GetComponent<DoorOpenScript>().Opened == false && isCloseToDoor && Input.GetKeyDown(KeyCode.F))
+        if (doorRotation <= 118 && doorIsOpened == false && door.GetComponent<DoorOpenScript>().doorOpened == false && isCloseToDoor && Input.GetKeyDown(KeyCode.F))
         {
             doorIsOpened = true;
             Debug.Log("Opening Door");
