@@ -11,6 +11,7 @@ public class VisitorScript : MonoBehaviour
     public float VMoveSpeed = 4f;
     public bool leave = false;
     public int visitorSequenceState = -1;
+    public bool coroutineStarted = false;
     //-1 = visitor not active
     //0 = visitor walks up to door
     //1 = visitor waits
@@ -50,13 +51,29 @@ public class VisitorScript : MonoBehaviour
         }
         if (visitorSequenceState == 3)
         {
-            visitorManagerScript.VisitorIncrement();
-            visitorManagerScript.InitializeNextVisitor();
-            this.gameObject.SetActive(false);
+            //visitorManagerScript.VisitorIncrement();
+            //visitorManagerScript.InitializeNextVisitor();
+            //this.gameObject.SetActive(false);
+            //StopAllCoroutines();
+            if (coroutineStarted == false)
+            {
+                StartCoroutine(ExecuteAfterTime(10));
+                Debug.Log("Started Coroutine");
+            }
         }
         //if(leave == true && Player.GetComponent<PlayerInteractionScript>().ShutDoor == true)
         //{
         //    //todo fix logic 
         //}
+        IEnumerator ExecuteAfterTime(float time)
+        {
+            coroutineStarted = true;
+            yield return new WaitForSeconds(time);
+            Debug.Log("Coroutine ended");
+            visitorManagerScript.VisitorIncrement();
+            visitorManagerScript.InitializeNextVisitor();
+            this.gameObject.SetActive(false);
+            coroutineStarted = false;
+        }
     }
 }
