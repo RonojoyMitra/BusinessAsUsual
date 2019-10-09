@@ -5,9 +5,10 @@ using UnityEngine;
 public class DoorOpenScript : MonoBehaviour
 {
     public Rigidbody thisRigidbody;
-    public Vector3 startingTorque;
+    public Vector3 openingTorque;
     public bool doorOpened = false;
-    public float doorRotation; 
+    public float doorRotation;
+    public Vector3 closingTorque; 
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +25,12 @@ public class DoorOpenScript : MonoBehaviour
     void DoorOpened()
     {
         doorOpened = true;
-        thisRigidbody.AddTorque(startingTorque);
+        thisRigidbody.AddTorque(openingTorque);
     }
 
     void DoorClosed()
     {
         doorOpened = false;
-        thisRigidbody.AddTorque(-startingTorque);
+        thisRigidbody.AddTorque(closingTorque);
     }
 }

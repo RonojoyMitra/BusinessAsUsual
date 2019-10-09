@@ -156,7 +156,7 @@ MonoBehaviour:
   Player: {fileID: 246490552}
   mainDoor: {fileID: 599926931}
   visitorManagerScript: {fileID: 1990443704}
-  VMoveSpeed: 8
+  VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
 --- !u!136 &173002316
@@ -190,7 +190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100010, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   Player: {fileID: 246490552}
   mainDoor: {fileID: 599926931}
   visitorManagerScript: {fileID: 1990443704}
-  VMoveSpeed: 8
+  VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
 --- !u!136 &227950749
@@ -303,7 +303,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100006, guid: bae110eee250e4b418b188f4ae4e3170, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -638,7 +638,7 @@ MonoBehaviour:
   Player: {fileID: 246490552}
   mainDoor: {fileID: 599926931}
   visitorManagerScript: {fileID: 1990443704}
-  VMoveSpeed: 8
+  VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
 --- !u!136 &314307591
@@ -672,7 +672,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c532880e607f8c84d8b9bf0c46a522ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -825,7 +825,7 @@ MonoBehaviour:
   Player: {fileID: 246490552}
   mainDoor: {fileID: 599926931}
   visitorManagerScript: {fileID: 1990443704}
-  VMoveSpeed: 8
+  VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
 --- !u!1 &436245552
@@ -1070,9 +1070,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisRigidbody: {fileID: 599926937}
-  startingTorque: {x: 0, y: 50, z: 0}
+  openingTorque: {x: 0, y: 70, z: 0}
   doorOpened: 0
   doorRotation: 0
+  closingTorque: {x: 0, y: -70, z: 0}
 --- !u!1 &694044345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +1478,7 @@ MonoBehaviour:
   Player: {fileID: 246490552}
   mainDoor: {fileID: 599926931}
   visitorManagerScript: {fileID: 1990443704}
-  VMoveSpeed: 8
+  VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
 --- !u!136 &1795549879
@@ -1511,7 +1512,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3da4aad06945bbf4baf801c2aacbc01e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
