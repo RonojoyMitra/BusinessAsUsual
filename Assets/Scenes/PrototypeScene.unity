@@ -159,6 +159,7 @@ MonoBehaviour:
   VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
+  coroutineStarted: 0
 --- !u!136 &173002316
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -272,6 +273,7 @@ MonoBehaviour:
   VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
+  coroutineStarted: 0
 --- !u!136 &227950749
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -641,6 +643,7 @@ MonoBehaviour:
   VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
+  coroutineStarted: 0
 --- !u!136 &314307591
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -766,7 +769,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6a4af6ffc0479974498ee043f8512f50, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -794,7 +797,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369920400}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -5495902117074765545, guid: 1f5c7bbc6f2ad144f83242a4b2ffdb28, type: 3}
 --- !u!4 &369920404
 Transform:
   m_ObjectHideFlags: 0
@@ -802,13 +805,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369920400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.95, y: 1.98, z: 10.616667}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 6.9447, y: 2, z: 10.624143}
+  m_LocalScale: {x: 0.3441551, y: 0.21589108, z: 0.8249446}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!114 &369920405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +831,7 @@ MonoBehaviour:
   VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
+  coroutineStarted: 0
 --- !u!1 &436245552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1485,7 @@ MonoBehaviour:
   VMoveSpeed: 6
   leave: 0
   visitorSequenceState: -1
+  coroutineStarted: 0
 --- !u!136 &1795549879
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1721,7 +1726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097202907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: 2.1, z: 8.99}
+  m_LocalPosition: {x: 0.24, y: 1.75, z: 8.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
