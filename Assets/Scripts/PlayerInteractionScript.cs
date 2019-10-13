@@ -49,7 +49,7 @@ public class PlayerInteractionScript : MonoBehaviour
             door.SendMessage("DoorOpened");
             ShutDoor = false;
         }
-        if (doorRotation > 118 && Input.GetKeyDown(KeyCode.F) && isCloseToDoor)
+        if (doorRotation > 160 && Input.GetKeyDown(KeyCode.F) && isCloseToDoor)
         {
             {
                 Debug.Log("DoorisClosed");
