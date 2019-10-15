@@ -35,4 +35,22 @@ public class FirstPersonControllerScript : MonoBehaviour
     {
         thisRigidBody.velocity = inputVector * moveSpeed + Physics.gravity * 0.69f;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ramp")
+        {
+            Debug.Log("onramp");
+            moveSpeed = 30f;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ramp")
+        {
+            Debug.Log("offramp");
+            moveSpeed = 10f;
+        }
+    }
 }
