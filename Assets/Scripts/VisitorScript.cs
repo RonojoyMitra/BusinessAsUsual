@@ -29,6 +29,8 @@ public class VisitorScript : MonoBehaviour
         if (visitorSequenceState == 0)
         {
             transform.position = Vector3.MoveTowards(transform.position, OutsidetheDoor.transform.position, VMoveSpeed * Time.deltaTime);
+            Debug.Log("GotoDoor");
+            //0
         }
         if (transform.position == OutsidetheDoor.transform.position && visitorSequenceState == 0)
         {
@@ -38,13 +40,13 @@ public class VisitorScript : MonoBehaviour
             Debug.Log(visitorSequenceState);
             //1
         }
-        if (mainDoor.transform.localEulerAngles.y > 118 && visitorSequenceState == 1)
+        if (mainDoor.transform.localEulerAngles.y > 208 && visitorSequenceState == 1)
         {
             visitorSequenceState = 2;
             Debug.Log("SayLine");
             Debug.Log(visitorSequenceState);
         }
-        if (mainDoor.transform.localEulerAngles.y < 1 && visitorSequenceState == 2)
+        if (mainDoor.transform.localEulerAngles.y < 91 && visitorSequenceState == 2)
         {
             visitorSequenceState = 3;
             Debug.Log(visitorSequenceState);
@@ -57,7 +59,7 @@ public class VisitorScript : MonoBehaviour
             //StopAllCoroutines();
             if (coroutineStarted == false)
             {
-                StartCoroutine(ExecuteAfterTime(10));
+                StartCoroutine(ExecuteAfterTime(6));
                 Debug.Log("Started Coroutine");
             }
         }
