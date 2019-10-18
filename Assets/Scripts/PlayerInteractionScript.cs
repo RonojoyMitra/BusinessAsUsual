@@ -14,7 +14,7 @@ public class PlayerInteractionScript : MonoBehaviour
     void Update()
     {
         Ray PlayerRay = new Ray(transform.position, transform.forward);
-        float maxRayDistance = 3.5f;
+        float maxRayDistance = 4f;
         Debug.DrawRay(PlayerRay.origin,PlayerRay.direction * maxRayDistance,Color.green);
         doorRotation = door.transform.localEulerAngles.y;
         RaycastHit PlayerHit = new RaycastHit();
