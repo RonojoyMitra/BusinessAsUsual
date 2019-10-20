@@ -58,6 +58,6 @@ public class PlayerInteractionScript : MonoBehaviour
                 ShutDoor = true;
             }
         }
-
+       
     }
 }

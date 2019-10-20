@@ -13,6 +13,10 @@ public class VisitorScript : MonoBehaviour
     public int visitorSequenceState = -1;
     public bool coroutineStarted = false;
     public AudioSource aud;
+    public AudioSource doorAud;
+    public AudioClip doorKnocking;
+    //public AudioClip doorOpening;
+    //public AudioClip doorShutting;
     //-1 = visitor not active
     //0 = visitor walks up to door
     //1 = visitor waits
@@ -36,6 +40,8 @@ public class VisitorScript : MonoBehaviour
         if (transform.position == OutsidetheDoor.transform.position && visitorSequenceState == 0)
         {
             Debug.Log("PlayDoorbell Sound");
+            //doorAud.clip = doorKnocking;
+            doorAud.PlayOneShot(doorKnocking);
             visitorSequenceState = 1;
             leave = true;
             Debug.Log(visitorSequenceState);
