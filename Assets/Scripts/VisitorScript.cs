@@ -12,6 +12,7 @@ public class VisitorScript : MonoBehaviour
     public bool leave = false;
     public int visitorSequenceState = -1;
     public bool coroutineStarted = false;
+    public AudioSource aud;
     //-1 = visitor not active
     //0 = visitor walks up to door
     //1 = visitor waits
@@ -20,7 +21,7 @@ public class VisitorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        aud = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,6 +45,7 @@ public class VisitorScript : MonoBehaviour
         {
             visitorSequenceState = 2;
             Debug.Log("SayLine");
+            aud.Play();
             Debug.Log(visitorSequenceState);
         }
         if (mainDoor.transform.localEulerAngles.y < 91 && visitorSequenceState == 2)
@@ -53,6 +55,7 @@ public class VisitorScript : MonoBehaviour
         }
         if (visitorSequenceState == 3)
         {
+            aud.Pause();
             //visitorManagerScript.VisitorIncrement();
             //visitorManagerScript.InitializeNextVisitor();
             //this.gameObject.SetActive(false);
